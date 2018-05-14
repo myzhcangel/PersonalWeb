@@ -1,0 +1,165 @@
+.jumbotron {
+	padding: 0 0;
+	position: relative;
+	margin-bottom: 0;
+}
+
+.jumbotron-info {
+	position: absolute;
+	top: 35%;
+	left: 60%;
+	background-color: #000;
+	opacity: 0.8;
+	color: #fff;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
+.welcome {
+	background-color: #f8f9fa;
+	padding-bottom: 5px;
+}
+
+#welcome-container h1 {
+	font-family: 'Merriweather', serif;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#welcome-container hr {
+	width: 25%;
+	border: 1px solid; 
+}
+
+#welcome-container p {
+	text-align: justify;
+}
+
+#footer-container {
+	text-align: center;
+	padding-bottom: 25px;
+	padding-top: 15px;
+	font-family: 'Merriweather', serif;
+}
+
+#resume-button {
+	border: 2px solid #4CAF50;
+	padding: 6px 24px;
+	margin-top: 12px;
+}
+
+.panel-footer {
+	background-color: #f8f9fa;
+}
+
+.slider-image {
+	width: 100%;
+	/*height: 400px;*/
+}
+
+#jumbotron_img {
+	filter: grayscale(20%);
+}
+/***********************Large Screen***********************/
+
+@media (min-width: 1200px) {
+	.jumbotron-info {
+		width: 350px;
+	}
+}
+
+/***********************Medium Screen***********************/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.jumbotron-info {
+		width: 350px;
+	}
+}
+
+/***********************Small Screen***********************/
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.jumbotron-info {
+		width: 280px;
+	}
+
+	.jumbotron-info h1 {
+		font-size: 2.0em;
+	}
+
+	#welcome-container hr {
+		width: 34%;
+		border: 1px solid; 
+	}
+}
+
+/***********************Extra Small Screen***********************/
+
+@media (min-width: 576px) and (max-width: 767px) {
+	.jumbotron-info {
+		width: 185px;
+	}
+
+	.jumbotron-info h1 {
+		font-size: 2.0em;
+	}
+
+	#welcome-container hr {
+		width: 48%;
+		border: 1px solid; 
+	}
+}
+
+/***********************Super Extra Small Screen***********************/
+
+@media (max-width: 575px) {
+	.jumbotron-info {
+		width: 25%;
+	}
+
+	.jumbotron-info h1 {
+		font-size: 15px;
+	}
+
+	.jumbotron-info p {
+		font-size: 12px;
+	}	
+
+	#welcome-container h1 {
+		font-family: 'Merriweather', serif;
+		padding-top: 20px;
+		text-align: center;
+		font-size: 30px;
+	}
+
+	#welcome-container p {
+		text-align: justify;
+		font-size: 14px;
+	}
+
+	#welcome-container hr {
+		width: 200px;
+		border: 1px solid; 
+	}
+
+	#footer-container h2 {
+		font-size: 18px;
+	}
+}
+
+/***********************Super Extra Small Mobile Screen***********************/
+
+@media (max-width: 411px) {
+	.jumbotron-info {
+		width: 25%;
+	}
+
+	.jumbotron-info h1 {
+		font-size: 12px;
+	}
+
+	.jumbotron-info p {
+		font-size: 8px;
+	}	
+}

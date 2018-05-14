@@ -1,0 +1,28 @@
+#logo {
+	background: url(../images/logo.png) no-repeat;
+	background-size: 100% 100%;
+	height: 30px;
+	width: 50px;
+	margin-right: 15px;
+}
+
+.facebook-icon {
+	color: #3B5998;
+	font-size: 25px;
+}
+
+.linkedin-icon {
+	color: #0077B5;
+	margin-left: 25px;
+	font-size: 25px;
+}
+
+.navbar-toggler {
+	padding: 0.25rem 0.25rem;
+	margin: 2px;
+}
+
+.navbar-toggler-icon {
+	width: 26px;
+	height: 26px;
+}

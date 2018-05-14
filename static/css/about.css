@@ -1,0 +1,16 @@
+#container-div {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+body {
+	background-color: #f8f9fa;
+}
+
+#contact {
+	text-align: center;
+}
+
+#message1 {
+	padding-bottom: 80px;
+}
