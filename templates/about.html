@@ -15,6 +15,42 @@
 	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 </head>
 <body>
+  <script type="text/javascript" src="https://s3.amazonaws.com/group25hotel/js/lib/axios/dist/axios.standalone.js"></script>
+  <script type="text/javascript" src="https://s3.amazonaws.com/group25hotel/js/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+  <script type="text/javascript" src="https://s3.amazonaws.com/group25hotel/js/lib/CryptoJS/rollups/sha256.js"></script>
+  <script type="text/javascript" src="https://s3.amazonaws.com/group25hotel/js/lib/CryptoJS/components/hmac.js"></script>
+  <script type="text/javascript" src="https://s3.amazonaws.com/group25hotel/js/lib/CryptoJS/components/enc-base64.js"></script>
+  <script type="text/javascript" src="https://s3.amazonaws.com/group25hotel/js/lib/url-template/url-template.js"></script>
+  <script type="text/javascript" src="https://s3.amazonaws.com/group25hotel/js/lib/apiGatewayCore/sigV4Client.js"></script>
+  <script type="text/javascript" src="https://s3.amazonaws.com/group25hotel/js/lib/apiGatewayCore/apiGatewayClient.js"></script>
+  <script type="text/javascript" src="https://s3.amazonaws.com/group25hotel/js/lib/apiGatewayCore/simpleHttpClient.js"></script>
+  <script type="text/javascript" src="https://s3.amazonaws.com/group25hotel/js/lib/apiGatewayCore/utils.js"></script>
+  <script type="text/javascript" src="/static/js/apigClient.js"></script>
+  <script type="text/javascript">
+    function sendemail() {
+      var result = "name:\n";
+      result += document.getElementById('name1').value.toString();
+      result += "\nphone:\n";
+      result += document.getElementById('phone1').value.toString();
+      result += "\nmessage:\n";
+      result += document.getElementById('message1').value.toString();
+      //result = result.replace("@", " at ");
+      //alert(result);
+      var body = {message:result};
+      var params = {};
+      var additionalParams = {};
+      var apigClient = apigClientFactory.newClient();
+      apigClient.rootPost(params, body, additionalParams)
+          .then(function(result){
+              alert("Email sent!");
+          }).catch( function(result){
+              alert("Sorry, an unexpected error occurred. Please check back later!");
+          });
+    }
+    function hey() {
+      execute = true;
+    }
+  </script>
 	<!-- <div id="includedHeader"></div> -->
   {% include 'header.html' %}
 
@@ -101,15 +137,14 @@
   <h2 id="contact">
     Contact Me
   </h2>
-  <form>
   <div class="form-group">
     <label for="name1">Your name</label>
     <input type="text" class="form-control" id="name1" placeholder="Enter name">
   </div>
   <div class="form-group">
     <label for="email1">Your email address</label>
-    <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
-  </div>
+    <input type="text" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div> 
   <div class="form-group">
     <label for="phone1">Your phone number</label>
     <input type="text" class="form-control" id="phone1" placeholder="Enter phone number">
@@ -119,8 +154,7 @@
     <textarea name="textarea" id = "message1" class="form-control" placeholder="Message"></textarea>
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+  <button class="btn btn-primary" onclick="sendemail()">Submit</button>
 </div>
 </body>
 </html>
